@@ -100,6 +100,8 @@
       .app.sidebar-collapsed .sidebar>.nav~.nav{margin-top:6px}
       .app.sidebar-collapsed .nav button{width:40px;height:40px;min-height:40px;padding:0;gap:0;justify-content:center;border-radius:9px}
     }
+    /* Contain editor dropdown layers beneath the preview, not the app shell. */
+    body:has(.module-preview) .workspace>main{isolation:isolate;pointer-events:none}
 </style>
 </head>
 <body>
@@ -434,11 +436,26 @@
     saveQuestionBeforePreview();if(row&&text&&!document.getElementById('questionText').value){question.listEntry=document.querySelector('#savedQuestions .quiz-question-list-item:last-child');row.previewQuestions=row.previewQuestions||[];row.previewQuestions.push(question)}
   };
   let modulePreviewState=null;
-  function addModulePreviewButtons(){document.querySelectorAll('.course-section').forEach(section=>{if(section.querySelector('.module-preview-launch'))return;const button=document.createElement('button');button.type='button';button.className='btn ghost module-preview-launch';button.innerHTML='<span class="material-symbols-outlined">visibility</span>Preview Module';button.onclick=()=>openModulePreview(section.id);section.querySelector('.section-actions').appendChild(button)})}
+  function addModulePreviewButtons(){
+    document.querySelectorAll('.course-section .module-preview-launch').forEach(button=>button.remove());
+    const addButton=document.getElementById('showAddModule');
+    let actions=document.getElementById('moduleWorkspaceActions');
+    if(!actions){
+      actions=document.createElement('div');actions.id='moduleWorkspaceActions';
+      actions.style.cssText='display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:10px';
+      addButton.before(actions);actions.appendChild(addButton);addButton.style.marginTop='0';
+    }
+    if(actions.querySelector('.module-preview-launch'))return;
+    const button=document.createElement('button');
+    button.type='button';button.className='btn ghost module-preview-launch';
+    button.innerHTML='<span class="material-symbols-outlined">visibility</span>Preview Modules';
+    button.onclick=()=>openModulePreview();actions.appendChild(button);
+  }
   const addSectionBeforePreview=addSection;addSection=name=>{addSectionBeforePreview(name);addModulePreviewButtons()};addModulePreviewButtons();
   window.openModulePreview=sectionId=>{
+    document.querySelectorAll('.item-type-control.open,.curriculum-popover.open').forEach(menu=>menu.classList.remove('open'));
     const modules=[...document.querySelectorAll('.course-section')].map((section,index)=>({id:section.id,title:section.querySelector('.section-name').value||`Module ${index+1}`,items:[...section.querySelectorAll('.curriculum-row')].map(row=>({row,title:row.querySelector('.item-title-input')?.value||'Untitled item',type:row.dataset.itemType||'video',duration:Number(row.dataset.duration)||0}))}));
-    const items=modules.flatMap((module,moduleIndex)=>module.items.map(item=>({...item,moduleIndex}))),selected=items.findIndex(item=>modules[item.moduleIndex].id===sectionId);
+    const items=modules.flatMap((module,moduleIndex)=>module.items.map(item=>({...item,moduleIndex}))),selected=sectionId?items.findIndex(item=>modules[item.moduleIndex].id===sectionId):(items.length?0:-1);
     modulePreviewState={modules,items,index:selected,trigger:document.activeElement};
     document.getElementById('modulePreview')?.remove();
     const courseTitle=document.getElementById('manageTitleInput')?.value||'Course preview';
