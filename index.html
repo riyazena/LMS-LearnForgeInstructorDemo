@@ -85,6 +85,21 @@
     @media(max-width:1100px){.module-preview{grid-template-columns:240px minmax(0,1fr)}}
     @media(max-width:800px){.module-preview,body:has(#appShell.sidebar-collapsed) .module-preview{left:0}}
     @media(max-width:600px){.module-preview{grid-template-columns:1fr;grid-template-rows:minmax(140px,30vh) minmax(0,1fr)}}
+    /* Shared 72px header baseline keeps both dividers aligned. */
+    .app .sidebar{padding-top:0}
+    .app .sidebar::after{content:"";position:absolute;top:71px;left:0;right:0;height:1px;background:rgba(255,255,255,.14);pointer-events:none}
+    .app .brand,.app:not(.sidebar-collapsed) .brand{height:72px;min-height:72px;flex-shrink:0;border-bottom:0;padding:0 34px 0 2px;gap:8px}
+    .app .brandmark,.app:not(.sidebar-collapsed) .brandmark{width:40px;height:40px;border-radius:9px}
+    .app .brandmark img,.app:not(.sidebar-collapsed) .brandmark img{width:36px;height:36px}
+    .app .collapse-btn,.app:not(.sidebar-collapsed) .collapse-btn{width:28px;height:28px;top:22px;right:10px;border-radius:7px;font-size:20px}
+    .app.sidebar-collapsed .brand{padding:0;justify-content:center}
+    .app.sidebar-collapsed .collapse-btn{left:22px;right:auto;top:22px}
+    @media(min-width:801px){
+      .app.sidebar-collapsed .sidebar>.nav{justify-items:center;gap:6px}
+      .app.sidebar-collapsed .sidebar>.nav:first-of-type{margin-top:18px}
+      .app.sidebar-collapsed .sidebar>.nav~.nav{margin-top:6px}
+      .app.sidebar-collapsed .nav button{width:40px;height:40px;min-height:40px;padding:0;gap:0;justify-content:center;border-radius:9px}
+    }
 </style>
 </head>
 <body>
