@@ -172,6 +172,18 @@
     @media(max-width:1000px){.browse-detail-hero{grid-template-columns:minmax(0,1fr) 340px;gap:24px}.browse-detail-art{height:150px}}@media(max-width:800px){.browse-detail-hero{grid-template-columns:1fr;align-items:start}.browse-detail-aside{grid-template-columns:minmax(0,1fr) 220px;align-items:start;align-content:start}.browse-detail-art{height:130px}}
     @media(max-width:650px){.browse-detail-hero,.browse-detail-pane{padding-left:18px;padding-right:18px}.browse-detail-aside{grid-template-columns:1fr}.browse-detail-tabs{overflow:auto}.browse-detail-tab{white-space:nowrap;padding-inline:14px}.browse-module-button{grid-template-columns:24px minmax(0,1fr) auto}.browse-module-time{grid-column:2}.browse-module-chevron{grid-column:3;grid-row:1}.browse-module-name{flex-wrap:wrap}}
 
+
+/* Browse course reference layout */
+.browse-detail-shell{background:transparent;border:0;overflow:visible;box-shadow:none}
+.browse-detail-hero{display:grid;grid-template-columns:1fr 1fr;padding:0;gap:0;align-items:stretch;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 2px 5px #102a5c0a}
+.browse-detail-main{padding:48px 56px;min-width:0;display:flex;flex-direction:column}.browse-detail-tags{display:flex;gap:12px;margin:0 0 30px}.browse-detail-tags .chip{border-radius:8px;padding:7px 16px;text-transform:none}
+.browse-detail-main h1{font-size:clamp(28px,2.35vw,46px);line-height:1.2;margin:0 0 30px;color:var(--ink);letter-spacing:-1px}.browse-instructor{margin:0 0 30px}.browse-instructor .avatar{width:50px;height:50px;background:#7954ed}.browse-instructor small{display:block;color:#8592a8;margin-bottom:5px}.browse-instructor b{display:block}.browse-detail-main h2{font-size:20px;margin:0 0 12px}.browse-detail-main p{font-size:16px;line-height:1.65;color:#8190a8;margin:0 0 12px}
+.browse-detail-art{height:auto;min-height:580px;border-radius:0;margin:0;display:block;overflow:hidden}.browse-detail-art img{width:100%;height:100%;object-fit:cover;display:block}.course-facts{display:flex;gap:48px;border-top:1px solid var(--border);padding-top:32px;margin-top:50px}.course-facts small{display:block;color:#8c98ab;font-size:13px;margin-bottom:8px}.course-facts b{font-size:16px}
+.course-info-card{margin-top:36px;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 2px 5px #102a5c0a}.browse-detail-tabs{padding:0 24px;gap:0;border-bottom:1px solid var(--border)}.browse-detail-tab{padding:24px 26px;font-size:18px;border-radius:0}.browse-detail-pane{padding:38px 42px}.browse-detail-pane h2{font-size:21px;margin-bottom:24px}.course-outcomes{display:grid;grid-template-columns:1fr 1fr;gap:24px 50px}.course-outcome{display:flex;gap:16px;color:var(--slate);line-height:1.5;font-size:16px}.course-outcome span{color:#079669;font-size:14px;line-height:18px;width:20px;height:20px;border:2px solid #079669;border-radius:50%;text-align:center;flex-shrink:0;margin-top:2px}
+#browseDetailModules{padding:0}.browse-module-list{display:block;margin:0}.course-module{border-bottom:1px solid var(--border)}.course-module:last-child{border:0}.course-module summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:22px;padding:26px 34px;font-size:18px;color:var(--ink);font-weight:700}.course-module summary::-webkit-details-marker{display:none}.course-module summary:before{content:'⌄';color:var(--deep)}.course-module[open] summary{background:#f1f3f8}.course-module[open] summary:before{content:'⌃'}.course-module time{margin-left:auto;font-size:14px;font-weight:400;color:#8592a8;white-space:nowrap}.course-lesson{display:flex;gap:20px;justify-content:space-between;padding:22px 34px 22px 66px;border-top:1px solid var(--border);color:var(--ink);font-size:16px}.course-lesson small{color:#8592a8;white-space:nowrap;font-size:14px}
+.rating-summary{display:flex;gap:80px;align-items:center;margin:8px 0 42px}.rating-score{min-width:140px;text-align:center}.rating-score strong{display:block;font-size:58px;line-height:1.2;color:var(--ink)}.rating-stars{color:#ff9800;letter-spacing:2px}.rating-score small{display:block;color:#8592a8;margin-top:14px}.rating-bars{width:390px;display:grid;gap:12px}.rating-bar{display:flex;align-items:center;gap:16px;color:#8592a8;font-size:14px}.rating-track{height:8px;background:#e4e7ec;flex:1;border-radius:9px;overflow:hidden}.rating-track i{display:block;height:100%;background:#f59e0b;border-radius:9px}.course-review{display:flex;gap:18px;padding:25px 0;border-top:1px solid var(--border)}.course-review .avatar{background:#7560dc;width:48px;height:48px;flex-shrink:0}.review-heading{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;margin-bottom:10px}.review-heading time{color:#98a2b3}.course-review p{font-size:14px;color:var(--slate)}
+@media(max-width:1100px){.browse-detail-main{padding:32px}.browse-detail-art{min-height:520px}.course-outcomes{gap:20px}.rating-summary{gap:30px}}
+@media(max-width:800px){.browse-detail-hero{grid-template-columns:1fr}.browse-detail-art{height:300px;min-height:0}.browse-detail-main{padding:26px}.course-facts{margin-top:24px}.browse-detail-pane{padding:26px}.course-outcomes{grid-template-columns:1fr}.browse-detail-tabs{padding:0 8px}.browse-detail-tab{padding:20px 14px;font-size:15px}.rating-summary{flex-wrap:wrap}.rating-bars{width:min(390px,100%)}.course-module summary{padding:22px 18px;font-size:16px;gap:12px}.course-lesson{padding:20px 18px 20px 42px}.course-review{gap:12px}}
 </style>
 </head>
 <body>
@@ -230,32 +242,23 @@
       <section class="page browse-detail-page" id="browse-course-detail">
         <button class="browse-detail-back" type="button" onclick="go('browse-courses')"><span class="material-symbols-outlined">arrow_back</span>Back to Browse Courses</button>
         <div class="browse-detail-shell">
-          <div class="browse-detail-hero">
-            <div class="browse-detail-main">
-              <h1 id="browseDetailTitle">Course title</h1>
-              <div class="browse-instructor"><span class="avatar" id="browseDetailInstructorAvatar">MC</span><div><small>Instructor</small><b id="browseDetailInstructor">Mike Chen</b></div></div>
-              <p class="browse-detail-description" id="browseDetailDescription"></p>
-            </div>
-            <aside class="browse-detail-aside">
-              <div>
-                <div class="browse-detail-meta"><span><i class="material-symbols-outlined">schedule</i><span id="browseDetailTime"></span></span><span><i class="material-symbols-outlined">menu_book</i><span id="browseDetailModuleCount"></span></span></div>
-                <div class="browse-detail-tags" style="margin-top:10px"><span class="chip info" id="browseDetailCategory"></span><span class="chip success" id="browseDetailPrice"></span></div>
-              </div>
-              <div class="browse-detail-art" id="browseDetailArt"><span class="material-symbols-outlined">menu_book</span></div>
-            </aside>
-          </div>
+<div class="browse-detail-hero"><div class="browse-detail-main">
+<div class="browse-detail-tags"><span class="chip info" id="browseDetailCategory"></span><span class="chip success" id="browseDetailPrice"></span></div>
+<h1 id="browseDetailTitle">Course title</h1>
+<div class="browse-instructor"><span class="avatar" id="browseDetailInstructorAvatar">MC</span><div><small>Instructor</small><b id="browseDetailInstructor">Mike Chen</b></div></div>
+<h2>About this course</h2><p id="browseDetailAboutText"></p><p id="browseDetailDescription"></p>
+<div class="course-facts"><div><small>Duration</small><b id="browseDetailTime"></b></div><div><small>Modules</small><b id="browseDetailModuleCount"></b></div></div>
+</div><div class="browse-detail-art" id="browseDetailArt"></div></div><div class="course-info-card">
           <div class="browse-detail-tabs" role="tablist" aria-label="Course information">
-            <button class="browse-detail-tab active" type="button" data-browse-detail-tab="about">About</button>
+            <button class="browse-detail-tab active" type="button" data-browse-detail-tab="about">What you'll learn</button>
             <button class="browse-detail-tab" type="button" data-browse-detail-tab="modules">Modules</button>
             <button class="browse-detail-tab" type="button" data-browse-detail-tab="ratings">Ratings</button>
-            <button class="browse-detail-tab" type="button" data-browse-detail-tab="discussion">Discussion</button>
+            
           </div>
-          <div class="browse-detail-pane active" id="browseDetailAbout">
-            <h2>About this course</h2><p id="browseDetailAboutText"></p><button class="browse-show-more" type="button" onclick="toast('Full course description expanded')">Show more</button>
-            <div class="browse-detail-section"><h2>Modules preview</h2><p id="browseDetailPreviewCount"></p><div class="browse-module-list" id="browseDetailPreviewModules"></div></div>
-          </div>
-          <div class="browse-detail-pane" id="browseDetailModules"><h2>Course content</h2><p id="browseDetailContentSummary"></p><div class="browse-module-list" id="browseDetailAllModules"></div></div>
-          <div class="browse-detail-pane" id="browseDetailRatings"><div class="browse-ratings-empty"><span>No ratings yet.</span></div></div>
+<div class="browse-detail-pane active" id="browseDetailAbout"><h2>What you'll learn</h2><div id="courseOutcomes" class="course-outcomes"></div></div>
+<div class="browse-detail-pane" id="browseDetailModules"><div class="browse-module-list" id="browseDetailAllModules"></div></div>
+<div class="browse-detail-pane" id="browseDetailRatings"></div>
+<div hidden><span id="browseDetailPreviewCount"></span><span id="browseDetailContentSummary"></span><div id="browseDetailPreviewModules"></div></div>
           <div class="browse-detail-pane" id="browseDetailDiscussion">
             <div class="browse-discussion-toggle"><div><b>Discussion</b><small>Learners can post and reply</small></div><button class="browse-switch" type="button" aria-label="Discussion enabled" onclick="toast('Discussion setting updated')"></button></div>
             <div class="browse-discussion-title"><span class="material-symbols-outlined">chat_bubble</span>Discussion <span class="chip info">4</span></div>
@@ -264,7 +267,7 @@
             <div class="browse-comments" id="browseComments"></div>
           </div>
         </div>
-      </section>
+      </div></section>
 
       <section class="page" id="course-detail">
         <button class="link" data-page="catalog" style="margin-bottom:16px">← Back to Course Management</button>
@@ -701,5 +704,13 @@
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&modulePreviewState)closeModulePreview()});
   document.addEventListener('click',event=>{if(modulePreviewState&&event.target.closest('.nav [data-page]'))closeModulePreview()},true);
 </script>
-</body>
+<script>
+const referenceOutcomes=['Recognise common workplace ethics issues and respond confidently.','Apply ethical frameworks to practical, everyday decisions.','Navigate difficult conversations with clarity and professionalism.','Identify conflicts of interest and follow company policy.','Protect personal integrity while meeting workplace expectations.','Use a clear decision-making model for ethical dilemmas.'];
+const referenceReviews=[['JL','Jordan Lee',5,'2 weeks ago','Excellent course. The ethical decision-making module was particularly insightful. Highly recommend to anyone starting a new role.'],['PR','Priya Rajan',4,'1 month ago','Well structured and easy to follow. The quizzes reinforced the material nicely. Would love more real-world case studies.'],['TM','Tom Martinez',5,'1 month ago','Covered everything I needed to onboard confidently. Mike Chen explains concepts clearly without being dry.'],['SK','Sara Kim',3,'2 months ago','Solid foundations course but felt a bit brief. The PDF resources were helpful though.'],['AO','Ade Okonkwo',5,'3 months ago','Completed this as part of compliance training. Clear, concise and genuinely useful. Great production quality.']];
+renderBrowseModuleRows=function(course){const ethics=course.title.startsWith('Workplace Ethics');const names=ethics?['Introduction & Key Concepts','Ethical Frameworks','Workplace Conduct','Professional Communication','Knowledge Check & Reflection']:['Introduction & Key Concepts','Core Principles','Practical Application','Guided Practice','Knowledge Check & Reflection'];return Array.from({length:course.mods},(_,i)=>{const lessons=i===0?[['Welcome to the Course','Video',5],['Course Overview & Objectives','PDF',8],['Key Terms & Definitions','Article',10]]:[[names[i]||'Further Learning','Video',15],['Practical Examples','Article',14],['Knowledge Check','Quiz',15]];return '<details class="course-module"><summary>Module '+(i+1)+': '+(names[i]||'Further Learning')+'<time>'+lessons.reduce((n,l)=>n+l[2],0)+' min</time></summary>'+lessons.map(l=>'<div class="course-lesson"><span>'+l[0]+'</span><small>'+l[1]+' · '+l[2]+' min</small></div>').join('')+'</details>'}).join('')};
+const originalOpenBrowseCourse=window.openBrowseCourse;
+window.openBrowseCourse=function(title){originalOpenBrowseCourse(title);const ethics=activeBrowseCourse.title.startsWith('Workplace Ethics');document.getElementById('browseDetailDescription').textContent=ethics?'This course covers the legal and cultural frameworks underpinning workplace ethics, how to navigate difficult conversations, recognise conflicts of interest, and uphold company policy without compromising personal integrity.':'';document.getElementById('courseOutcomes').innerHTML=(ethics?referenceOutcomes:['Understand the key concepts and terminology.','Apply what you learn to practical situations.','Build confidence through focused examples.','Check your understanding with knowledge checks.']).map(t=>'<div class="course-outcome"><span aria-hidden="true">✓</span>'+t+'</div>').join('');document.getElementById('browseDetailRatings').innerHTML=ethics?'<div class="rating-summary"><div class="rating-score"><strong>4.4</strong><span class="rating-stars" aria-label="4.4 out of 5 stars">★★★★<span style="color:#d9dfe7">★</span></span><small>5 ratings</small></div><div class="rating-bars">'+[3,1,1,0,0].map((n,i)=>'<div class="rating-bar"><span>'+(5-i)+'</span><span class="rating-stars">★</span><div class="rating-track"><i style="width:'+n/5*100+'%"></i></div><span>'+n+'</span></div>').join('')+'</div></div>'+referenceReviews.map(r=>'<article class="course-review"><span class="avatar">'+r[0]+'</span><div><div class="review-heading"><b>'+r[1]+'</b><span class="rating-stars" aria-label="'+r[2]+' out of 5 stars">'+'★'.repeat(r[2])+'☆'.repeat(5-r[2])+'</span><time>'+r[3]+'</time></div><p>'+r[4]+'</p></div></article>').join(''):'<p>No ratings yet.</p>';syncCourseTabs();};
+function syncCourseTabs(){document.querySelectorAll('[data-browse-detail-tab]').forEach(t=>{t.setAttribute('role','tab');t.setAttribute('aria-selected',t.classList.contains('active'));const id='browseDetail'+t.dataset.browseDetailTab.charAt(0).toUpperCase()+t.dataset.browseDetailTab.slice(1);t.setAttribute('aria-controls',id);t.id='tab-'+t.dataset.browseDetailTab;document.getElementById(id).setAttribute('role','tabpanel');document.getElementById(id).setAttribute('aria-labelledby',t.id);});}
+document.querySelectorAll('[data-browse-detail-tab]').forEach(t=>{t.addEventListener('click',syncCourseTabs);t.addEventListener('keydown',e=>{const tabs=[...document.querySelectorAll('[data-browse-detail-tab]')];let i=tabs.indexOf(t);if(e.key==='ArrowRight')i=(i+1)%tabs.length;else if(e.key==='ArrowLeft')i=(i+tabs.length-1)%tabs.length;else return;e.preventDefault();tabs[i].focus();tabs[i].click();});});
+</script></body>
 </html>
