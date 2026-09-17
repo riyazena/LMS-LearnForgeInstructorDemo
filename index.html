@@ -228,7 +228,250 @@ main:has(#assignment-results.active){padding:24px 24px 40px}@media(max-width:700
 .quiz-course-title>.chip{display:none!important}.quiz-course-title:has(>.chip){padding-right:0}
 
 .quiz-results-stats{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:600px){.quiz-results-stats{grid-template-columns:1fr}}
+
+.discussion-course-row{display:flex;align-items:center;gap:16px;padding:18px 24px;border-top:1px solid var(--border)}.discussion-thumb{width:56px;height:56px;border-radius:9px;object-fit:cover;flex-shrink:0}.discussion-course-copy{flex:1;min-width:0}.discussion-course-copy b{display:block;color:var(--ink);font-size:15px}.discussion-course-copy small{display:block;color:var(--slate);margin-top:6px;font-size:12px}.discussion-page-head{display:flex;gap:16px;align-items:center;margin:0 0 24px}.discussion-page-head h1{margin:0 0 5px;font-size:25px}.discussion-page-head p{margin:0;color:var(--slate);font-size:13px}.discussion-surface{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}.discussion-setting{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px;border:1px solid var(--control);border-radius:10px;background:var(--soft);margin-bottom:22px}.discussion-setting small{display:block;color:var(--slate);margin-top:5px}.discussion-toggle{width:44px;height:24px;border:0;border-radius:99px;background:var(--control);padding:3px;flex-shrink:0}.discussion-toggle[aria-checked="true"]{background:var(--deep)}.discussion-toggle span{display:block;width:18px;height:18px;background:white;border-radius:50%;transition:transform .18s}.discussion-toggle[aria-checked="true"] span{transform:translateX(20px)}.discussion-title{display:flex;gap:8px;align-items:center;font-size:16px;margin:0 0 18px}.discussion-title .material-symbols-outlined{color:var(--slate);font-size:19px}.discussion-input{width:100%;min-height:90px;border:1px solid var(--control);border-radius:9px;background:var(--soft);color:var(--ink);padding:14px;font:inherit;font-size:14px;resize:vertical}.discussion-compose-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;color:var(--slate);font-size:12px}.discussion-compose-foot button:disabled{opacity:.45;cursor:not-allowed}.discussion-thread{padding:24px 0;border-top:1px solid var(--border)}.discussion-thread:first-child{margin-top:24px}.discussion-message{display:flex;gap:12px}.discussion-message .avatar{flex-shrink:0;background:var(--navy-h);width:38px;height:38px}.discussion-message-body{flex:1;min-width:0}.discussion-author{display:flex;align-items:center;flex-wrap:wrap;gap:10px;font-size:14px}.discussion-author time{color:var(--muted);font-size:12px}.discussion-message-body p{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--slate);font-size:14px;line-height:1.65;margin:9px 0}.discussion-actions{display:flex;gap:16px}.discussion-actions button{padding:4px 0;border:0;background:transparent;color:var(--navy);font-size:12px;font-weight:650}.discussion-actions .discussion-delete{color:var(--muted)}.discussion-actions .discussion-delete:hover{color:var(--danger)}.discussion-replies{margin:18px 0 0 50px;padding-left:18px;border-left:2px solid var(--border);display:grid;gap:18px}.discussion-reply-form{margin:16px 0 0 50px}.discussion-empty{padding:32px 0;text-align:center;color:var(--slate);font-size:14px}.discussion-notice{font-size:13px;color:var(--slate);margin:0 0 18px}main:has(#course-discussion.active){padding:24px}@media(max-width:650px){.discussion-surface{padding:18px}.discussion-course-row{padding:16px;gap:12px}.discussion-replies{margin-left:18px;padding-left:12px}.discussion-reply-form{margin-left:0}.discussion-page-head h1{font-size:21px}}
+/* Keep reply composer actions on one horizontal row. */
+.discussion-reply-form .discussion-compose-foot>div{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.discussion-reply-form .discussion-compose-foot>div>.btn{width:auto;margin:0;flex:0 0 auto}
+.course-author-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:20px;align-items:start}.course-author-main,.course-author-side{display:grid;gap:20px}.course-author-panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}.course-author-panel h2{font-size:16px;margin:0 0 20px}.author-field{display:block;margin:18px 0;color:var(--ink);font-size:13px}.author-field>span{display:flex;justify-content:space-between;gap:12px;margin-bottom:8px}.author-field small{color:var(--muted);font-weight:400}.author-field input:not([type=checkbox]),.author-field textarea,.author-field select{width:100%;border:1px solid var(--control);border-radius:8px;background:var(--soft);color:var(--ink);padding:11px 12px;font:inherit}.author-field textarea{min-height:90px;resize:vertical}.author-upload{border:1px dashed var(--control);border-radius:9px;padding:24px;text-align:center;color:var(--slate);display:block;cursor:pointer}.author-upload img{max-height:150px;max-width:100%;display:block;margin:0 auto 10px}.author-upload input{display:block;margin:12px auto 0;max-width:100%}.author-two{display:grid;grid-template-columns:1fr 1fr;gap:16px}.author-toolbar{display:flex;gap:8px;padding:8px;border:1px solid var(--control);border-bottom:0;border-radius:8px 8px 0 0;background:var(--soft)}.author-toolbar button{border:0;background:transparent;padding:6px;color:var(--navy)}.author-rich{border:1px solid var(--control);border-radius:0 0 8px 8px;min-height:170px;padding:14px;outline-color:var(--navy)}.author-outcome{display:flex;gap:8px;margin-bottom:8px}.author-outcome input{flex:1}.author-outcome button{border:0;background:transparent;color:var(--muted)}.author-checklist{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px;color:var(--slate);font-size:13px}.author-checklist li{display:flex;gap:9px;align-items:center}.author-checklist .done{color:var(--teal)}.author-checklist .material-symbols-outlined{font-size:18px}.author-progress{height:5px;background:var(--border);border-radius:5px;overflow:hidden}.author-progress i{display:block;height:100%;background:var(--navy)}.author-save{width:100%;justify-content:center}.author-save:disabled{opacity:.45;cursor:not-allowed}.author-note{font-size:12px;line-height:1.6;color:var(--muted)}.author-divider{border:0;border-top:1px solid var(--border);margin:22px 0}.author-summary{display:flex;gap:12px}.author-summary>div{background:var(--soft);padding:18px;flex:1;text-align:center;border-radius:9px}.author-summary b,.author-summary small{display:block}.author-summary small{font-size:12px;color:var(--muted);margin-top:6px}#authorModules #manageModulesPane{display:block!important}#authorModules .modules-workspace{padding:24px}@media(max-width:1000px){.course-author-layout{grid-template-columns:1fr}.course-author-side{grid-row:1;grid-template-columns:repeat(2,minmax(0,1fr))}.course-author-side>div:last-child{display:none}}@media(max-width:650px){.course-author-side,.author-two{grid-template-columns:1fr}.course-author-panel{padding:18px}}
+[hidden]#authorPriceFields{display:none}.author-upload img[hidden]{display:none}/* Course details: one category control and compact source information. */
+#manageDetailsPane .select-shell>select{display:none!important}
+#coursePermissionNote{display:none!important}
+#manageDetailsPane .manage-side .panel:has(#sourceTitle)>.panel-title{margin-bottom:14px}
+#manageDetailsPane .source-card{padding-top:0;gap:12px}
+#manageDetailsPane .source-card small{margin-top:4px;line-height:1.45}/* Align category dropdown with the adjacent duration field. */
+#manageDetailsPane .form-label>.select-shell:has(#manageCategory){margin-top:7px}
+/* Two-step course authoring workspace. */
+main:has(#create-course.active){padding:0}#create-course .author-stepbar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;padding:18px 28px;background:var(--card);border-bottom:1px solid var(--border)}#create-course .author-stepbar .review-back{margin:0;font-size:14px}.author-steps{display:flex;align-items:center;gap:14px}.author-step{display:flex;align-items:center;gap:10px;border:0;background:none;color:var(--muted);font-weight:600;white-space:nowrap;padding:0}.author-step i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--border);font-style:normal}.author-step.active{color:var(--ink)}.author-step.active i{background:var(--navy);color:white}.author-step-line{width:60px;height:2px;background:var(--border)}#create-course .course-author-layout{grid-template-columns:minmax(0,1fr) 320px;gap:0;height:calc(100vh - 143px);overflow:hidden}#create-course .course-author-main{display:block;overflow-y:auto;padding:28px 32px;scrollbar-width:thin}#create-course .course-author-main>.course-author-panel{max-width:1050px;margin:0}#create-course .course-author-side{display:flex;flex-direction:column;gap:18px;overflow-y:auto;padding:28px 20px;border-left:1px solid var(--border)}#create-course .course-author-panel{padding:22px;border-radius:14px}#create-course .course-author-main>.course-author-panel{padding:28px}#create-course .course-author-side .course-author-panel:last-child{display:block}#create-course .author-field{margin:22px 0}#create-course .author-field>span{margin-bottom:9px}#create-course .author-field input:not([type=checkbox]),#create-course .author-field textarea,#create-course .author-field select{background:var(--card);min-height:46px}#create-course .author-field textarea{min-height:96px}#create-course #authorOverview{min-height:120px}#create-course .author-upload{position:relative;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--blue-tint)}#create-course .author-upload img{max-height:220px;object-fit:contain}#create-course .author-upload:has(img:not([hidden]))>span,#create-course .author-upload:has(img:not([hidden]))>input{display:none}.author-remove-image{position:absolute;right:12px;top:12px;border:1px solid var(--border);border-radius:7px;background:var(--card);color:var(--slate);padding:7px 10px}#create-course .author-upload:not(:has(img:not([hidden]))) .author-remove-image{display:none}#create-course .author-save{height:48px}#create-course .author-checklist{gap:16px}#create-course .author-checklist .material-symbols-outlined{font-size:22px}#create-course #authorReadyCount{float:right;background:var(--blue-tint);color:var(--navy);border-radius:999px;padding:4px 8px;font-size:12px}#create-course .author-progress{display:none}#create-course .author-summary>div{padding:16px 8px;border:1px solid var(--border)}#create-course[data-author-step="1"] #authorModules{display:none}#create-course[data-author-step="2"] .course-author-main>.course-author-panel{display:none}#create-course #authorModules{max-width:1050px}@media(max-width:900px){#create-course .course-author-layout{grid-template-columns:minmax(0,1fr) 280px}#create-course .course-author-main{padding:20px}#create-course .course-author-side{padding:20px 14px}}@media(max-width:700px){#create-course .author-stepbar{grid-template-columns:1fr;padding:16px;gap:16px}.author-steps{justify-content:center}.author-step-line{width:28px}#create-course .course-author-layout{height:auto;overflow:visible;grid-template-columns:1fr}#create-course .course-author-main{overflow:visible;padding:16px}#create-course .course-author-side{grid-row:auto;overflow:visible;border-left:0;padding:0 16px 24px}#create-course .course-author-main>.course-author-panel{padding:20px}}
 </style>
+
+<style>
+/* Create Course layout refinement: use the available workspace width */
+#create-course .course-author-layout{grid-template-columns:minmax(0,1fr) 300px;gap:18px;height:calc(100vh - 143px);padding:24px 28px 28px;align-items:start}
+#create-course .course-author-main{padding:0;overflow-y:auto;min-width:0}
+#create-course .course-author-main>.course-author-panel{max-width:none;width:100%;margin:0;padding:26px 28px}
+#create-course #authorModules{max-width:none;width:100%}
+#create-course .course-author-side{padding:0;gap:16px;border-left:0;overflow-y:auto}
+#create-course .course-author-side .course-author-panel{padding:20px}
+#create-course .author-field{margin:18px 0}
+#create-course .author-two{gap:16px}
+@media(max-width:1000px){#create-course .course-author-layout{grid-template-columns:minmax(0,1fr) 270px;padding:20px;gap:16px}}
+@media(max-width:760px){#create-course .course-author-layout{height:auto;overflow:visible;grid-template-columns:1fr;padding:16px}#create-course .course-author-main{overflow:visible}#create-course .course-author-side{overflow:visible;padding:0}#create-course .course-author-main>.course-author-panel{padding:20px}}
+</style>
+
+<style>
+/* Complete Create Course layout from supplied reference */
+#create-course .course-author-layout{grid-template-columns:minmax(0,3.25fr) minmax(250px,.85fr);gap:16px;width:100%}
+#create-course .course-author-main{min-width:0}
+#create-course .course-author-main>.course-author-panel{padding:20px}
+#create-course .course-author-main .author-field{margin:14px 0}
+#create-course .course-author-main .author-divider{margin:16px 0}
+#create-course .course-author-main .author-rich{min-height:150px}
+#create-course .course-author-main .author-upload{min-height:108px}
+#create-course .course-author-main .author-two{grid-template-columns:1fr 1fr;gap:14px}
+#create-course .course-author-main .discussion-setting{margin-top:8px;margin-bottom:0}
+#create-course .course-author-main #authorOutcomes+.btn{width:100%;justify-content:center}
+@media(max-width:1050px){#create-course .course-author-layout{grid-template-columns:minmax(0,1fr) 260px}}
+@media(max-width:820px){#create-course .course-author-layout{grid-template-columns:1fr}#create-course .course-author-main .author-two{grid-template-columns:1fr}}
+</style>
+
+<style>
+/* Create Course scroll fix */
+#create-course.active{
+  height:auto !important;
+  min-height:calc(100vh - 72px);
+  overflow:visible !important;
+}
+#create-course .course-author-layout{
+  height:auto !important;
+  min-height:calc(100vh - 143px);
+  overflow:visible !important;
+  align-items:start;
+}
+#create-course .course-author-main{
+  height:auto !important;
+  max-height:none !important;
+  overflow:visible !important;
+}
+#create-course .course-author-side{
+  height:auto !important;
+  max-height:none !important;
+  overflow:visible !important;
+  align-self:start;
+}
+#create-course .course-author-main > .course-author-panel{
+  overflow:visible !important;
+}
+main:has(#create-course.active){
+  overflow:visible !important;
+  min-height:100vh;
+  padding-bottom:48px !important;
+}
+.workspace:has(#create-course.active){
+  overflow:visible !important;
+  min-height:100vh;
+}
+body:has(#create-course.active),
+html:has(#create-course.active){
+  overflow-y:auto !important;
+  height:auto !important;
+}
+@media(min-width:821px){
+  #create-course .course-author-side{
+    position:sticky;
+    top:96px;
+  }
+}
+</style>
+
+
+<style>
+/* Create Course thumbnail + status refinements */
+#create-course .author-upload{
+  min-height:142px;
+  padding:22px 24px;
+  border:1.5px dashed #cfd9e8;
+  border-radius:10px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#5f708b;
+  position:relative;
+  box-sizing:border-box;
+}
+#create-course .author-upload > span{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  line-height:1.35;
+}
+#create-course .author-upload > span::before{
+  content:"upload";
+  font-family:"Material Symbols Outlined";
+  font-size:22px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#eef2f7;
+  color:#61738e;
+  display:grid;
+  place-items:center;
+  margin-bottom:5px;
+}
+#create-course .author-upload small{
+  display:block;
+  color:#7c8ba1;
+  font-size:12px;
+}
+#create-course .author-upload input[type=file]{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+  cursor:pointer;
+  margin:0;
+  max-width:none;
+}
+#create-course .author-upload img:not([hidden]){
+  position:absolute;
+  inset:10px;
+  width:calc(100% - 20px);
+  height:calc(100% - 20px);
+  max-width:none;
+  max-height:none;
+  object-fit:cover;
+  border-radius:8px;
+  margin:0;
+  z-index:1;
+}
+#create-course #authorStatus{
+  appearance:auto;
+  cursor:pointer;
+}
+</style>
+
+
+<style>
+/* Global Zena dropdown style */
+select,
+.filter-select,
+.author-input select,
+#create-course select {
+  min-height:46px !important;
+  padding:0 42px 0 16px !important;
+  border:1px solid #d8e0ec !important;
+  border-radius:10px !important;
+  background-color:#fff !important;
+  color:#172033 !important;
+  font:inherit !important;
+  font-weight:600 !important;
+  box-shadow:none !important;
+  cursor:pointer !important;
+  outline:none !important;
+}
+select:hover,
+.filter-select:hover,
+#create-course select:hover {
+  border-color:#b9c6d8 !important;
+}
+select:focus,
+select:focus-visible,
+.filter-select:focus,
+#create-course select:focus {
+  border-color:#1E3B8A !important;
+  box-shadow:0 0 0 2px rgba(30,59,138,.08) !important;
+}
+
+/* Custom dropdowns generated from native selects */
+.zena-select{position:relative;width:100%;}
+.zena-select-native{
+  position:absolute !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  width:1px !important;
+  height:1px !important;
+}
+.zena-select-button{
+  width:100%;min-height:46px;padding:0 16px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  border:1px solid #d8e0ec;border-radius:10px;background:#fff;
+  color:#172033;font:inherit;font-weight:600;text-align:left;cursor:pointer;
+}
+.zena-select-button:hover{border-color:#b9c6d8;}
+.zena-select.open .zena-select-button{
+  border-color:#1E3B8A;
+  box-shadow:0 0 0 2px rgba(30,59,138,.08);
+}
+.zena-select-chevron{
+  font-family:"Material Symbols Outlined";
+  font-size:20px;font-weight:400;color:#53657e;
+  transition:transform .15s ease;
+}
+.zena-select.open .zena-select-chevron{transform:rotate(180deg);}
+.zena-select-menu{
+  display:none;position:absolute;z-index:100000;
+  top:calc(100% + 8px);left:0;right:0;
+  padding:8px;background:#fff;border:1px solid #e0e5ed;border-radius:12px;
+  box-shadow:0 8px 24px rgba(15,23,42,.12);
+  max-height:280px;overflow-y:auto;
+}
+.zena-select.open .zena-select-menu{display:block;}
+.zena-select-option{
+  width:100%;min-height:44px;padding:0 14px;border:0;border-radius:9px;
+  background:transparent;color:#172033;font:inherit;font-weight:600;
+  display:flex;align-items:center;text-align:left;cursor:pointer;
+}
+.zena-select-option:hover{background:#f5f7fb;}
+.zena-select-option.selected{
+  background:#eef2ff;color:#1E3B8A;
+}
+</style>
+
 </head>
 <body>
 <div class="app" id="appShell">
@@ -321,7 +564,7 @@ main:has(#assignment-results.active){padding:24px 24px 40px}@media(max-width:700
         <div id="manageModulesPane" class="hidden"><div class="panel modules-workspace"><div class="panel-title"><div><h2>Modules</h2><p>Organize the course into sections and curriculum items</p></div><button class="btn primary" id="showAddModule"><span class="material-symbols-outlined">add</span>Add Module</button></div><div class="empty-modules" id="emptyModulesState"><span class="empty-icon material-symbols-outlined">menu_book</span><b>No modules added</b><p>Click “Add Module” to create the Introduction section.</p></div><div id="sectionsWorkspace" class="hidden"><div id="sectionsList"></div><button class="btn ghost add-section-btn" id="addSection"><span class="material-symbols-outlined">add</span>Add Section</button></div></div><div class="panel curriculum-builder hidden" id="curriculumBuilder"><div class="panel-title"><div><h2>Add Curriculum Item</h2><p id="curriculumSectionLabel">Choose the content type for this section</p></div><button class="close" id="closeCurriculumBuilder" aria-label="Close curriculum builder">×</button></div><div id="contentTypeChoices" class="content-type-grid"></div><div id="curriculumItemForm" class="hidden"><div class="module-type-hint" id="curriculumTypeHint"></div><div class="form-grid"><label class="form-label full">Curriculum Item Title<input class="field" id="curriculumTitle" placeholder="Enter item title"></label><label class="form-label">Time / Duration (minutes)<input class="field" id="curriculumDuration" type="number" min="0" placeholder="e.g. 15"></label></div><div id="curriculumUrlFields" class="hidden"><label class="form-label">External URL<input class="field" id="curriculumUrl" type="url" placeholder="https://example.com/video"></label></div><div id="curriculumUploadFields" class="hidden"><label class="form-label">Upload File / Content<input class="field file-field" id="curriculumFile" type="file"></label></div><div id="curriculumQuizSettings" class="hidden"><div class="module-step"><span>1</span><b>Configure Quiz</b></div><div class="permission-note"><span class="material-symbols-outlined">info</span><span>Configure and save the quiz first. You can add questions only after the quiz curriculum item has been created.</span></div><div class="form-grid quiz-settings-grid"><label class="form-label">Number of Questions<input class="field" id="quizQuestionCount" type="number" min="1" placeholder="e.g. 10"></label><label class="form-label">Pass Score (%)<input class="field" id="quizPassScore" type="number" min="0" max="100" value="70"></label><label class="form-label">Time Limit (minutes)<input class="field" id="quizTimeLimit" type="number" min="0" value="0"></label><label class="form-label">Attempt Limit<input class="field" id="quizAttemptLimit" type="number" min="1" value="1"></label></div></div><div class="form-actions"><button class="btn ghost" id="cancelCurriculumItem">Cancel</button><button class="btn primary" id="saveCurriculumItem">Add Curriculum Item</button></div></div></div><div class="panel question-builder hidden" id="questionBuilder"><div class="panel-title"><div><h2 id="questionBuilderTitle">Add Questions</h2><p>Choose a question type and build the configured quiz</p></div><button class="close" id="closeQuestionBuilder" aria-label="Close question builder">×</button></div><div id="questionTypeStep"><div class="question-type-grid"><button class="question-type-card" data-question-type="Multiple Choice"><span class="material-symbols-outlined">radio_button_checked</span><b>Multiple Choice</b><small>One correct answer</small></button><button class="question-type-card" data-question-type="Multiple Selection"><span class="material-symbols-outlined">check_box</span><b>Multiple Selection</b><small>More than one correct answer</small></button></div></div><div id="questionEditor" class="hidden"><div class="module-step"><span>2</span><b id="questionEditorType">Multiple Choice</b></div><label class="form-label">Question<textarea class="field" id="questionText" placeholder="Enter your question"></textarea></label><div class="answer-list"><label><input type="radio" name="correctAnswer" checked><input class="field" placeholder="Answer option 1"></label><label><input type="radio" name="correctAnswer"><input class="field" placeholder="Answer option 2"></label><label><input type="radio" name="correctAnswer"><input class="field" placeholder="Answer option 3"></label><label><input type="radio" name="correctAnswer"><input class="field" placeholder="Answer option 4"></label></div><div class="form-actions"><button class="btn ghost" id="backQuestionType">Back</button><button class="btn primary" id="saveQuestion">Save Question</button></div></div><div id="savedQuestions"></div></div>
       </section>
 
-<section class="page" id="analytics"><div class="page-head"><div><h1>Analytics</h1><p>Track course activity and learner progress.</p></div><span class="date-chip">All time</span></div><div id="analyticsSummary" class="analytics-summary"></div><div id="analyticsProgress" class="analytics-progress"></div><div class="analytics-columns"><section class="analytics-panel"><header><h2>Course Performance</h2><p>Enrolments by course</p></header><div id="analyticsPerformance" class="analytics-performance"></div></section><section class="analytics-panel"><header><h2>Course Completion</h2><p>Learners who have completed each course</p></header><div class="analytics-table-wrap"><table class="analytics-table"><thead><tr><th scope="col">Course</th><th scope="col">Enrolled</th><th scope="col">Done</th><th scope="col">Rate</th></tr></thead><tbody id="analyticsCompletion"></tbody></table></div></section></div><p class="analytics-note">Preview data · Completion, progress, and certificate figures are illustrative.</p></section><section class="page" id="assignment-results"></section><section class="page" id="submission-course"></section><section class="page" id="submission-learners"></section><section class="page" id="submission-response"></section><section class="page" id="submissions"><div class="page-head"><div><div class="eyebrow">Learner work</div><h1>Submissions</h1><p>Review quiz and assignment submissions from your learners.</p></div><span class="date-chip">31 submissions</span></div><div class="subtabs" id="submissionTabs"><button class="active" data-submission-tab="quizzes">Quiz Submissions</button><button data-submission-tab="assignments">Assignment Submissions</button></div><div class="submission-filter-card"><div class="submission-filters"><div class="search-wrap"><input class="field" id="assessmentSearch" placeholder="Search learner name..." aria-label="Search learner name"></div><select class="field" id="assessmentCategory" aria-label="Filter by course"><option>All Courses</option><option>Environmental Sustainability Fundamentals</option><option>Cybersecurity Awareness Essentials</option><option>Add server-side search filters and pagination</option><option>Introduction to Modern Photography</option><option>Fundamentals of Financial Planning</option></select><select class="field" id="assessmentLength" aria-label="Filter by status"><option>All Statuses</option><option>Pending</option><option>Passed</option><option>Failed</option></select></div></div><div class="assess-grid" id="assessmentGrid"></div></section>
+<section class="page" id="analytics"><div class="page-head"><div><h1>Analytics</h1><p>Track course activity and learner progress.</p></div><span class="date-chip">All time</span></div><div id="analyticsSummary" class="analytics-summary"></div><div id="analyticsProgress" class="analytics-progress"></div><div class="analytics-columns"><section class="analytics-panel"><header><h2>Course Performance</h2><p>Enrolments by course</p></header><div id="analyticsPerformance" class="analytics-performance"></div></section><section class="analytics-panel"><header><h2>Course Completion</h2><p>Learners who have completed each course</p></header><div class="analytics-table-wrap"><table class="analytics-table"><thead><tr><th scope="col">Course</th><th scope="col">Enrolled</th><th scope="col">Done</th><th scope="col">Rate</th></tr></thead><tbody id="analyticsCompletion"></tbody></table></div></section></div><p class="analytics-note">Preview data · Completion, progress, and certificate figures are illustrative.</p></section><section class="page" id="create-course"></section><section class="page" id="course-discussion"></section><section class="page" id="assignment-results"></section><section class="page" id="submission-course"></section><section class="page" id="submission-learners"></section><section class="page" id="submission-response"></section><section class="page" id="submissions"><div class="page-head"><div><div class="eyebrow">Learner work</div><h1>Submissions</h1><p>Review quiz and assignment submissions from your learners.</p></div><span class="date-chip">31 submissions</span></div><div class="subtabs" id="submissionTabs"><button class="active" data-submission-tab="quizzes">Quiz Submissions</button><button data-submission-tab="assignments">Assignment Submissions</button></div><div class="submission-filter-card"><div class="submission-filters"><div class="search-wrap"><input class="field" id="assessmentSearch" placeholder="Search learner name..." aria-label="Search learner name"></div><select class="field" id="assessmentCategory" aria-label="Filter by course"><option>All Courses</option><option>Environmental Sustainability Fundamentals</option><option>Cybersecurity Awareness Essentials</option><option>Add server-side search filters and pagination</option><option>Introduction to Modern Photography</option><option>Fundamentals of Financial Planning</option></select><select class="field" id="assessmentLength" aria-label="Filter by status"><option>All Statuses</option><option>Pending</option><option>Passed</option><option>Failed</option></select></div></div><div class="assess-grid" id="assessmentGrid"></div></section>
 
       <section class="page" id="faqs"><div class="page-head"><div><div class="eyebrow">Help center</div><h1>Frequently asked questions</h1><p>Find clear answers about managing the Zena learning experience.</p></div><button class="btn ghost">Contact support</button></div><div class="faq-wrap"><aside class="faq-cats" id="faqCats"></aside><div class="faq-list" id="faqList"></div></div></section>
     </main>
@@ -821,5 +1064,650 @@ const saveAssignmentGrade=window.saveSubmissionGrade;window.saveSubmissionGrade=
 // Run last so legacy tab handlers cannot restore the previous flat assignment table.
 document.querySelectorAll('[data-submission-tab]').forEach(button=>button.addEventListener('click',()=>{assignmentFilterMode='';renderAssessments();}));
 renderAssessments();
-</script></body>
+</script><script>
+let activeDiscussionCourse=0,discussionSerial=100;
+const discussionData={0:{enabled:true,posts:[{id:1,name:'Alice Smith',initials:'AS',time:'2 hours ago',text:'How do we decide which information is safe to share with an AI tool at work?',replies:[{id:2,name:'Instructor',initials:'IN',instructor:true,time:'1 hour ago',text:'Start with your company’s approved tools and data policy. Avoid entering confidential or personal information. The responsible AI lesson has a useful checklist.'}]},{id:3,name:'Jordan Lee',initials:'JL',time:'Yesterday',text:'The examples on checking AI-generated answers were helpful. Does anyone have a verification checklist they use?',replies:[]}]},1:{enabled:true,posts:[{id:4,name:'Priya Rajan',initials:'PR',time:'Yesterday',text:'I tried the workflow exercise and saved time drafting meeting notes. I still reviewed every action item before sharing.',replies:[{id:5,name:'Instructor',initials:'IN',instructor:true,time:'Yesterday',text:'That’s a good approach. Keep the review step and check that the action owners and deadlines are accurate.'}]}]},2:{enabled:true,posts:[{id:6,name:'Tom Martinez',initials:'TM',time:'2 days ago',text:'If a suspicious email looks like it came from a colleague, should we report it before asking them?',replies:[{id:7,name:'Instructor',initials:'IN',instructor:true,time:'2 days ago',text:'Use your organisation’s reporting process and verify through a separate trusted channel. Avoid replying to the suspicious message or opening its attachments.'}]}]}};
+const discussionFeedback=new Map();
+function discussionState(ci){return discussionData[ci]||(discussionData[ci]={enabled:true,posts:[]});}
+function discussionCount(state){return state.posts.reduce((n,p)=>n+1+p.replies.length,0);}
+function renderCourseDiscussions(){const ids=Object.keys(discussionData).map(Number).filter(i=>discussionData[i].posts.length);document.getElementById('courseManagementDiscussions').innerHTML='<div class="panel sectioned"><div class="panel-title"><div><h2>Course Discussions</h2><p>Learner conversations and instructor replies</p></div><span class="chip info">'+ids.length+' courses</span></div>'+ids.map(ci=>{const c=courses[ci],state=discussionData[ci];return '<div class="discussion-course-row"><img class="discussion-thumb" src="'+c.image+'" alt=""><div class="discussion-course-copy"><b>'+submissionEscape(c.title)+'</b><small>'+state.posts.length+' discussions · '+state.posts.reduce((n,p)=>n+p.replies.length,0)+' replies</small></div><button class="grade-btn" onclick="openCourseDiscussion('+ci+')">Open <span aria-hidden="true">↗</span></button></div>';}).join('')+(ids.length?'':'<p class="discussion-empty">No course discussions yet.</p>')+'</div>';}
+pageNames['course-discussion']='Course Discussion';
+window.openCourseDiscussion=function(ci){activeDiscussionCourse=ci;renderCourseDiscussion();go('course-discussion');document.querySelector('.nav button[data-page="catalog"]').classList.add('active');};
+window.backToCourseDiscussions=function(){renderCourseDiscussions();go('catalog');document.querySelector('[data-management-tab="discussions"]').click();};
+function discussionMessage(message,postId,isReply){return '<div class="discussion-message"><span class="avatar">'+submissionEscape(message.initials)+'</span><div class="discussion-message-body"><div class="discussion-author"><b>'+submissionEscape(message.name)+'</b>'+(message.instructor?'<span class="chip info">Instructor</span>':'')+'<time>'+submissionEscape(message.time)+'</time></div><p>'+submissionEscape(message.text)+'</p><div class="discussion-actions">'+(!isReply&&discussionState(activeDiscussionCourse).enabled?'<button onclick="showDiscussionReply('+postId+')">Reply</button>':'')+'<button class="discussion-delete" onclick="deleteDiscussionMessage('+postId+','+(isReply?message.id:'null')+')">Delete</button></div></div></div>';}
+function renderCourseDiscussion(){const ci=activeDiscussionCourse,c=courses[ci],state=discussionState(ci);document.getElementById('course-discussion').innerHTML='<button class="review-back" onclick="backToCourseDiscussions()">Back to Course Discussions</button><div class="discussion-page-head"><img class="discussion-thumb" src="'+c.image+'" alt=""><div><h1>'+submissionEscape(c.title)+'</h1><p>Course discussion</p></div></div><div class="discussion-surface"><div class="discussion-setting"><div>Discussion<small>'+(state.enabled?'Learners can post and reply':'Posting and replies are paused')+'</small></div><button class="discussion-toggle" role="switch" aria-label="Enable course discussion" aria-checked="'+state.enabled+'" onclick="toggleCourseDiscussion()"><span></span></button></div><h2 class="discussion-title"><span class="material-symbols-outlined" aria-hidden="true">chat_bubble</span>Discussion</h2>'+(state.enabled?'<form onsubmit="event.preventDefault();postCourseDiscussion()"><textarea class="discussion-input" id="courseDiscussionInput" maxlength="500" aria-label="Write a comment" placeholder="Write a comment... (max 500 characters)" oninput="updateDiscussionComposer(this,\'courseDiscussionCount\',\'courseDiscussionPost\')"></textarea><div class="discussion-compose-foot"><span id="courseDiscussionCount">500 characters left</span><button class="btn primary" id="courseDiscussionPost" disabled>Post</button></div></form>':'<p class="discussion-notice">Discussion is paused. Existing comments remain visible.</p>')+'<div>'+state.posts.map(post=>'<article class="discussion-thread">'+discussionMessage(post,post.id,false)+(post.replies.length?'<div class="discussion-replies">'+post.replies.map(reply=>discussionMessage(reply,post.id,true)).join('')+'</div>':'')+'<div id="discussionReply'+post.id+'"></div></article>').join('')+(!state.posts.length?'<p class="discussion-empty">No comments yet. Be the first to start the discussion!</p>':'')+'</div></div>';}
+window.updateDiscussionComposer=function(input,countId,buttonId){document.getElementById(countId).textContent=(500-input.value.length)+' characters left';document.getElementById(buttonId).disabled=!input.value.trim();};
+window.postCourseDiscussion=function(){const state=discussionState(activeDiscussionCourse),input=document.getElementById('courseDiscussionInput'),text=input.value.trim();if(!state.enabled||!text||text.length>500)return;state.posts.unshift({id:++discussionSerial,name:'Instructor',initials:'IN',instructor:true,time:'Just now',text,replies:[]});renderCourseDiscussion();renderCourseDiscussions();toast('Comment posted');};
+window.showDiscussionReply=function(id){if(!discussionState(activeDiscussionCourse).enabled)return;document.getElementById('discussionReply'+id).innerHTML='<form class="discussion-reply-form" onsubmit="event.preventDefault();postDiscussionReply('+id+')"><textarea class="discussion-input" id="replyInput'+id+'" maxlength="500" aria-label="Reply to discussion" placeholder="Write a reply..." oninput="updateDiscussionComposer(this,\'replyCount'+id+'\',\'replyPost'+id+'\')"></textarea><div class="discussion-compose-foot"><span id="replyCount'+id+'">500 characters left</span><div><button class="btn ghost" type="button" onclick="document.getElementById(\'discussionReply'+id+'\').replaceChildren()">Cancel</button> <button class="btn primary" id="replyPost'+id+'" disabled>Reply</button></div></div></form>';document.getElementById('replyInput'+id).focus();};
+window.postDiscussionReply=function(id){const state=discussionState(activeDiscussionCourse),post=state.posts.find(p=>p.id===id),input=document.getElementById('replyInput'+id),text=input.value.trim();if(!state.enabled||!post||!text||text.length>500)return;post.replies.push({id:++discussionSerial,name:'Instructor',initials:'IN',instructor:true,time:'Just now',text});renderCourseDiscussion();renderCourseDiscussions();toast('Reply posted');};
+window.deleteDiscussionMessage=function(postId,replyId){const state=discussionState(activeDiscussionCourse),post=state.posts.find(p=>p.id===postId);if(!post)return;if(replyId!==null)post.replies=post.replies.filter(r=>r.id!==replyId);else state.posts=state.posts.filter(p=>p.id!==postId);renderCourseDiscussion();renderCourseDiscussions();toast(replyId!==null?'Reply deleted':'Discussion deleted');};
+window.toggleCourseDiscussion=function(){const state=discussionState(activeDiscussionCourse);state.enabled=!state.enabled;renderCourseDiscussion();};
+renderCourseDiscussions();
+</script><script>
+pageNames['create-course']='New Course';let authorImage='',authorCourseIndex=-1;const courseModuleNodes=new Map();const modulesOriginalParent=document.getElementById('manageModulesPane').parentNode;
+function storeEditorModules(){captureSubmissionCurriculum();const rows=document.getElementById('sectionsList');courseModuleNodes.set(editorCourseOwner,[...rows.children]);[...rows.children].forEach(n=>n.remove());}
+function loadEditorModules(index){const rows=document.getElementById('sectionsList');rows.replaceChildren(...(courseModuleNodes.get(index)||[]));sectionCount=rows.children.length;document.getElementById('emptyModulesState').classList.toggle('hidden',!!sectionCount);document.getElementById('sectionsWorkspace').classList.toggle('hidden',!sectionCount);syncCourseDuration();}
+const manageEditableBase=window.openManageCourse;
+window.openManageCourse=function(title){storeEditorModules();modulesOriginalParent.appendChild(document.getElementById('manageModulesPane'));manageEditableBase(title);loadEditorModules(editorCourseOwner);authorCourseIndex=editorCourseOwner;document.querySelectorAll('.course-detail-field').forEach(field=>{field.disabled=false;field.closest('.select-shell')?.querySelector('.select-trigger')?.removeAttribute('disabled');});document.getElementById('detailsAccessBadge').textContent='Editable';const note=document.getElementById('coursePermissionNote');note.classList.add('editable');note.innerHTML='<span class="material-symbols-outlined">edit</span><span>You can edit all course details and manage modules, including courses assigned by an Admin.</span>';document.getElementById('sourceDescription').textContent='You can edit course details and curriculum';document.getElementById('saveCourseDetails').classList.remove('hidden');};
+document.getElementById('saveCourseDetails').onclick=function(){const c=courses[authorCourseIndex>=0?authorCourseIndex:editorCourseOwner],title=document.getElementById('manageTitleInput').value.trim();if(!title){toast('Enter a course title');return;}c.title=title;c.desc=document.getElementById('manageSummary').value.trim();c.overview=document.getElementById('manageOverview').value.trim();c.cat=document.getElementById('manageCategory').value;c.time=document.getElementById('manageDuration').value;c.tags=document.querySelector('.course-detail-field[value="AI, responsible technology"]')?.value||'';document.getElementById('manageCourseTitle').textContent=title;renderCourses();toast('Course details saved for this session');};
+window.openNewCourse=function(){storeEditorModules();editorCourseOwner=-1;authorCourseIndex=-1;authorImage='';loadEditorModules(-1);const root=document.getElementById('create-course');root.innerHTML='<button class="review-back" onclick="go(\'catalog\')">Back to Course Management</button><div class="page-head"><div><h1>New Course</h1><p>Fill in the details below to create your course.</p></div></div><div class="course-author-layout"><div class="course-author-main"><section class="course-author-panel"><h2>Course Details</h2><label class="author-field">Course Thumbnail</label><label class="author-upload" id="authorDrop"><img id="authorImagePreview" hidden alt="Course thumbnail preview"><span>Drop image here or click to browse<small>(.jpg, .png, .webp)</small></span><input id="authorImageFile" type="file" accept="image/jpeg,image/png,image/webp" onchange="readAuthorImage(this.files[0])"></label><hr class="author-divider">'+authorTextField('authorTitle','Title *',150,false,'e.g. Introduction to Cybersecurity')+authorTextField('authorSummary','Summary (shown on catalog cards)',250,true,'A short, compelling summary of the course...')+authorTextField('authorOverview','Course Overview (shown in course hero)',1500,true,'What will learners achieve by completing this course?')+'<label class="author-field">Full Description <small>(rich text, shown in course body)</small></label><div class="author-toolbar">'+[['bold','B'],['italic','I'],['formatBlock','H2'],['insertUnorderedList','• List'],['insertOrderedList','1. List']].map(([command,label])=>'<button type="button" onmousedown="event.preventDefault()" onclick="formatAuthorDescription(\''+command+'\')">'+label+'</button>').join('')+'</div><div id="authorDescription" class="author-rich" contenteditable="true" role="textbox" aria-label="Full Description" aria-multiline="true" oninput="updateAuthorReadiness()"></div><label class="author-field">Learning Outcomes <small>(What you’ll learn)</small><div id="authorOutcomes"></div><button class="btn ghost" type="button" onclick="addAuthorOutcome()">+ Add Outcome</button></label><hr class="author-divider"><div class="author-two"><label class="author-field"><span>Category</span><select id="authorCategory" onchange="updateAuthorReadiness()">'+[...new Set(courses.map(c=>c.cat))].map(c=>'<option>'+submissionEscape(c)+'</option>').join('')+'</select></label><label class="author-field"><span>Duration</span><input id="authorDuration" readonly value="0 min"><small>Auto-calculated from modules</small></label></div><label class="author-field"><span>Tags</span><input id="authorTags" placeholder="Separate tags with commas"></label><hr class="author-divider"><h2>Pricing & Discounts</h2><label><input type="checkbox" id="authorFree" checked onchange="document.getElementById(\'authorPriceFields\').hidden=this.checked"> Free Course</label><div id="authorPriceFields" class="author-two" hidden><label class="author-field"><span>Price ($)</span><input id="authorPrice" type="number" min="0" step="0.01" value="0"></label><label class="author-field"><span>Discount (%)</span><input id="authorDiscount" type="number" min="0" max="100" value="0"></label></div><hr class="author-divider"><h2>Access & Visibility</h2><label class="author-field"><span>Visibility</span><select id="authorVisibility"><option value="public">Public — visible to all learners</option><option value="private">Private — assigned learners only</option></select></label><div class="discussion-setting"><div>Discussion / Comments<small>Allow learners to post comments and questions on this course.</small></div><button id="authorDiscussion" type="button" class="discussion-toggle" role="switch" aria-label="Enable course discussion" aria-checked="true" onclick="this.setAttribute(\'aria-checked\',this.getAttribute(\'aria-checked\')!==\'true\')"><span></span></button></div></section><div id="authorModules"></div></div><aside class="course-author-side"><section class="course-author-panel"><h2>Publish Settings</h2><label class="author-field"><span>Status</span><select id="authorStatus" onchange="updateAuthorReadiness();updateAuthorStatusHelp()"><option value="Draft">Draft</option><option value="Published">Published</option><option value="Archived">Archived</option></select></label><p class="author-note" id="authorStatusHelp">Only you can see this course.</p><hr class="author-divider"><button class="btn primary author-save" id="authorSave" disabled onclick="saveNewAuthorCourse()">Create Course</button><p class="author-note" id="authorSaveHelp">Add a title to enable saving.</p></section><section class="course-author-panel"><h2>Readiness Checklist <small id="authorReadyCount"></small></h2><div class="author-progress"><i id="authorReadyBar"></i></div><ul class="author-checklist" id="authorChecklist"></ul></section><section class="course-author-panel"><h2>Course Summary</h2><div class="author-summary"><div><b id="authorModuleCount">0</b><small>Modules</small></div><div><b id="authorContentTime">—</b><small>Content</small></div></div><p class="author-note">Add modules and curriculum items below.</p></section></aside></div>';document.getElementById('authorModules').appendChild(document.getElementById('manageModulesPane'));document.getElementById('manageModulesPane').classList.remove('hidden');const drop=document.getElementById('authorDrop');drop.ondragover=e=>e.preventDefault();drop.ondrop=e=>{e.preventDefault();readAuthorImage(e.dataTransfer.files[0]);};updateAuthorReadiness();go('create-course');document.querySelector('.nav button[data-page="catalog"]').classList.add('active');};
+function authorTextField(id,label,max,area,placeholder){return '<label class="author-field"><span>'+label+'<small id="'+id+'Count">0/'+max+'</small></span><'+(area?'textarea':'input')+' id="'+id+'" maxlength="'+max+'" placeholder="'+placeholder+'" oninput="document.getElementById(\''+id+'Count\').textContent=this.value.length+\'/'+max+'\';updateAuthorReadiness()">'+(area?'</textarea>':'')+'</label>';}
+window.addAuthorOutcome=function(){const row=document.createElement('div');row.className='author-outcome';row.innerHTML='<input aria-label="Learning outcome" placeholder="What will learners be able to do?"><button type="button" aria-label="Remove outcome" onclick="this.parentNode.remove()">×</button>';document.getElementById('authorOutcomes').appendChild(row);row.querySelector('input').focus();};
+window.formatAuthorDescription=function(command){document.getElementById('authorDescription').focus();document.execCommand(command,false,command==='formatBlock'?'h2':null);updateAuthorReadiness();};
+window.readAuthorImage=function(file){if(!file)return;if(!['image/jpeg','image/png','image/webp'].includes(file.type)){toast('Choose a JPG, PNG, or WebP image');return;}const reader=new FileReader();reader.onload=()=>{authorImage=reader.result;const image=document.getElementById('authorImagePreview');image.src=authorImage;image.hidden=false;updateAuthorReadiness();};reader.readAsDataURL(file);};
+function authorChecks(){const count=document.querySelectorAll('#sectionsList .course-section').length,time=[...document.querySelectorAll('#sectionsList .curriculum-row')].reduce((n,row)=>n+Number(row.dataset.duration||0),0);return {count,time,checks:[['Course title',!!document.getElementById('authorTitle').value.trim()],['Description',!!document.getElementById('authorDescription').textContent.trim()],['Category selected',!!document.getElementById('authorCategory').value],['Thumbnail uploaded',!!authorImage],['At least one module',count>0],['Duration set',time>0]]};}
+window.updateAuthorReadiness=function(){if(!document.getElementById('authorTitle'))return;const {count,time,checks}=authorChecks(),ready=checks.filter(c=>c[1]).length;document.getElementById('authorChecklist').innerHTML=checks.map(([label,ok])=>'<li><span class="material-symbols-outlined '+(ok?'done':'')+'">'+(ok?'check_circle':'radio_button_unchecked')+'</span>'+label+'</li>').join('');document.getElementById('authorReadyCount').textContent=ready+'/6';document.getElementById('authorReadyBar').style.width=ready/6*100+'%';document.getElementById('authorModuleCount').textContent=count;document.getElementById('authorContentTime').textContent=time+' min';document.getElementById('authorDuration').value=time+' min';document.getElementById('authorSave').disabled=!checks[0][1];document.getElementById('authorSaveHelp').textContent=checks[0][1]?'Course changes are saved for this session.':'Add a title to enable saving.';document.getElementById('authorStatusHelp').textContent=document.getElementById('authorStatus').value==='Draft'?'Only you can see this course.':'Course will be published with the selected visibility.';};
+new MutationObserver(()=>{if(document.getElementById('create-course').classList.contains('active'))updateAuthorReadiness();}).observe(document.getElementById('sectionsList'),{childList:true,subtree:true,attributes:true,attributeFilter:['data-duration']});
+window.saveNewAuthorCourse=function(){const title=document.getElementById('authorTitle').value.trim();if(!title)return;const {count,time}=authorChecks(),free=document.getElementById('authorFree').checked,price=Number(document.getElementById('authorPrice').value),discount=Number(document.getElementById('authorDiscount').value);if(!free&&(!Number.isFinite(price)||price<=0||discount<0||discount>100)){toast('Enter a valid price and discount');return;}const course={title,desc:document.getElementById('authorSummary').value.trim(),overview:document.getElementById('authorOverview').value.trim(),description:document.getElementById('authorDescription').innerHTML,outcomes:[...document.querySelectorAll('#authorOutcomes input')].map(i=>i.value.trim()).filter(Boolean),cat:document.getElementById('authorCategory').value,status:document.getElementById('authorStatus').value,time:time+'m',mods:count,enrolled:0,price:free?'Free':'$'+(price*(1-discount/100)).toFixed(2),discount,tags:document.getElementById('authorTags').value.split(',').map(t=>t.trim()).filter(Boolean),visibility:document.getElementById('authorVisibility').value,image:authorImage||'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect width=%22800%22 height=%22400%22 fill=%22%23EEF2FF%22/%3E%3C/svg%3E'};courses.push(course);const ci=courses.length-1;courseModuleNodes.set(ci,[...document.getElementById('sectionsList').children]);editorCourseOwner=ci;discussionData[ci]={enabled:document.getElementById('authorDiscussion').getAttribute('aria-checked')==='true',posts:[]};renderCourses();go('catalog');toast('Course created');};
+document.getElementById('newCourse').onclick=openNewCourse;
+</script><script>
+let authorCurrentStep=1;
+const originalOpenAuthorSteps=window.openNewCourse;
+window.openNewCourse=function(){originalOpenAuthorSteps();const root=document.getElementById('create-course');root.querySelector('.page-head').remove();root.querySelector('.review-back').remove();root.insertAdjacentHTML('afterbegin','<header class="author-stepbar"><button class="review-back" onclick="authorStepBack()">Back</button><nav class="author-steps" aria-label="Course creation steps"><button class="author-step" id="authorStepOne" onclick="setAuthorStep(1)"><i>1</i>Course Details</button><span class="author-step-line" aria-hidden="true"></span><button class="author-step" id="authorStepTwo" onclick="continueAuthorCourse()"><i>2</i>Add Modules</button></nav></header>');document.getElementById('authorDrop').insertAdjacentHTML('beforeend','<button class="author-remove-image" type="button" onclick="event.preventDefault();removeAuthorThumbnail()">Remove</button>');document.getElementById('authorSave').onclick=()=>authorCurrentStep===1?continueAuthorCourse():saveNewAuthorCourse();setAuthorStep(1);};
+window.setAuthorStep=function(step){authorCurrentStep=step;document.getElementById('create-course').dataset.authorStep=step;document.getElementById('authorStepOne').classList.toggle('active',step===1);document.getElementById('authorStepTwo').classList.toggle('active',step===2);document.getElementById('authorStepOne').setAttribute('aria-current',step===1?'step':'false');document.getElementById('authorStepTwo').setAttribute('aria-current',step===2?'step':'false');document.getElementById('authorSave').textContent=step===1?'Save & Continue →':'Create Course';document.querySelector('#create-course .course-author-main').scrollTop=0;};
+window.continueAuthorCourse=function(){if(!document.getElementById('authorTitle').value.trim()){document.getElementById('authorTitle').focus();toast('Add a course title to continue');return;}setAuthorStep(2);};
+window.authorStepBack=function(){if(authorCurrentStep===2)setAuthorStep(1);else go('catalog');};
+window.removeAuthorThumbnail=function(){authorImage='';const img=document.getElementById('authorImagePreview');img.hidden=true;img.removeAttribute('src');document.getElementById('authorImageFile').value='';updateAuthorReadiness();};
+document.getElementById('newCourse').onclick=window.openNewCourse;
+</script>
+<script>
+window.updateAuthorStatusHelp = function(){
+  const status = document.getElementById('authorStatus');
+  const help = document.getElementById('authorStatusHelp');
+  if(!status || !help) return;
+  const messages = {
+    Draft: 'Only you can see this course.',
+    Published: 'This course will be available according to its visibility settings.',
+    Archived: 'This course is hidden from learners and kept for your records.'
+  };
+  help.textContent = messages[status.value] || '';
+};
+document.addEventListener('change', function(e){
+  if(e.target && e.target.id === 'authorStatus') window.updateAuthorStatusHelp();
+});
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('newCourse');
+  if (!button) return;
+
+  button.onclick = null;
+  button.addEventListener('click', function (event) {
+    event.preventDefault();
+    if (typeof window.openNewCourse === 'function') {
+      window.openNewCourse();
+    }
+  });
+});
+</script>
+
+
+<script>
+/* Apply the reference dropdown treatment across the prototype. */
+(function(){
+  function enhance(select){
+    if (!select || select.dataset.zenaEnhanced === 'true') return;
+    if (select.id === 'categoryFilter' || select.id === 'statusFilter') return;
+    if (select.multiple || select.size > 1) return;
+
+    select.dataset.zenaEnhanced = 'true';
+    const wrapper=document.createElement('div');
+    wrapper.className='zena-select';
+
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='zena-select-button';
+    button.innerHTML='<span class="zena-select-value"></span><span class="zena-select-chevron">expand_more</span>';
+
+    const menu=document.createElement('div');
+    menu.className='zena-select-menu';
+
+    select.parentNode.insertBefore(wrapper,select);
+    wrapper.appendChild(select);
+    wrapper.appendChild(button);
+    wrapper.appendChild(menu);
+    select.classList.add('zena-select-native');
+
+    function render(){
+      const value=button.querySelector('.zena-select-value');
+      const selected=select.options[select.selectedIndex];
+      value.textContent=selected ? selected.textContent : '';
+      menu.innerHTML='';
+      [...select.options].forEach((option,index)=>{
+        const item=document.createElement('button');
+        item.type='button';
+        item.className='zena-select-option'+(index===select.selectedIndex?' selected':'');
+        item.textContent=option.textContent;
+        item.disabled=option.disabled;
+        item.addEventListener('click',()=>{
+          select.selectedIndex=index;
+          select.dispatchEvent(new Event('change',{bubbles:true}));
+          wrapper.classList.remove('open');
+          render();
+        });
+        menu.appendChild(item);
+      });
+    }
+
+    button.addEventListener('click',e=>{
+      e.stopPropagation();
+      document.querySelectorAll('.zena-select.open').forEach(x=>{if(x!==wrapper)x.classList.remove('open')});
+      wrapper.classList.toggle('open');
+    });
+    select.addEventListener('change',render);
+    render();
+  }
+
+  function enhanceAll(root=document){
+    root.querySelectorAll('select').forEach(enhance);
+  }
+
+  document.addEventListener('click',()=>document.querySelectorAll('.zena-select.open').forEach(x=>x.classList.remove('open')));
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape') document.querySelectorAll('.zena-select.open').forEach(x=>x.classList.remove('open'));
+  });
+
+  const observer=new MutationObserver(mutations=>{
+    mutations.forEach(m=>m.addedNodes.forEach(node=>{
+      if(node.nodeType!==1)return;
+      if(node.matches?.('select')) enhance(node);
+      enhanceAll(node);
+    }));
+  });
+
+  observer.observe(document.body,{childList:true,subtree:true});
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>enhanceAll());
+  else enhanceAll();
+})();
+</script>
+
+
+<style>
+/* Fix duplicated-looking filter controls after custom dropdown enhancement */
+.zena-select > select.zena-select-native{
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  width:1px !important;
+  height:1px !important;
+  min-height:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  border:0 !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+  overflow:hidden !important;
+  clip:rect(0 0 0 0) !important;
+  clip-path:inset(50%) !important;
+}
+
+/* Course Management filter row */
+#course-management .filter-card,
+#course-management .course-filter-card,
+#course-management .filters-card,
+#course-management .filter-row,
+#course-management .course-filters{
+  align-items:center !important;
+}
+
+#course-management .zena-select{
+  min-width:0;
+  height:46px;
+}
+
+#course-management .zena-select-button{
+  height:46px;
+  min-height:46px;
+}
+
+/* Prevent native select sizing rules from reserving a second row */
+.zena-select{
+  display:block;
+  position:relative;
+}
+.zena-select .zena-select-menu{
+  box-sizing:border-box;
+}
+</style>
+
+<script>
+/* Ensure every enhanced dropdown only displays its custom control once. */
+(function(){
+  function cleanEnhancedSelects(){
+    document.querySelectorAll('.zena-select').forEach(wrapper=>{
+      const native=wrapper.querySelector(':scope > select');
+      if(native){
+        native.classList.add('zena-select-native');
+        native.setAttribute('aria-hidden','true');
+        native.tabIndex=-1;
+      }
+
+      /* Remove accidental duplicate custom buttons if enhancement ran twice. */
+      const buttons=[...wrapper.children].filter(el=>el.classList?.contains('zena-select-button'));
+      buttons.slice(1).forEach(el=>el.remove());
+
+      const menus=[...wrapper.children].filter(el=>el.classList?.contains('zena-select-menu'));
+      menus.slice(1).forEach(el=>el.remove());
+    });
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',cleanEnhancedSelects);
+  }else{
+    cleanEnhancedSelects();
+  }
+
+  new MutationObserver(cleanEnhancedSelects).observe(document.body,{
+    childList:true,
+    subtree:true
+  });
+})();
+</script>
+
+
+<style>
+/* Restore Course Management search + filters exactly as one clean row */
+#courseManagementCourses > .tools{
+  display:grid !important;
+  grid-template-columns:minmax(320px,1fr) 220px 220px !important;
+  gap:12px !important;
+  align-items:center !important;
+  padding:12px !important;
+  margin-bottom:20px !important;
+  overflow:visible !important;
+}
+#courseManagementCourses > .tools .search-wrap{
+  width:100% !important;
+  height:46px !important;
+  min-width:0 !important;
+  position:relative !important;
+}
+#courseManagementCourses > .tools #courseSearch{
+  display:block !important;
+  width:100% !important;
+  height:46px !important;
+  padding:0 14px 0 42px !important;
+  margin:0 !important;
+  border:1px solid var(--control) !important;
+  border-radius:10px !important;
+  background:#fff !important;
+  box-sizing:border-box !important;
+}
+#courseManagementCourses > .tools .search-wrap:before{
+  left:15px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  z-index:2 !important;
+}
+
+/* Course Management filters keep the original native select layout.
+   The global custom dropdown enhancer is intentionally disabled here. */
+#courseManagementCourses > .tools > select.field{
+  display:block !important;
+  position:static !important;
+  width:100% !important;
+  height:46px !important;
+  min-height:46px !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+  clip:auto !important;
+  clip-path:none !important;
+  padding:0 40px 0 14px !important;
+  margin:0 !important;
+  border:1px solid var(--control) !important;
+  border-radius:10px !important;
+  background-color:#fff !important;
+  color:var(--body) !important;
+  box-sizing:border-box !important;
+}
+#courseManagementCourses > .tools > .zena-select{
+  height:46px !important;
+  width:100% !important;
+  min-width:0 !important;
+  margin:0 !important;
+}
+#courseManagementCourses > .tools > .zena-select .zena-select-button{
+  width:100% !important;
+  height:46px !important;
+  min-height:46px !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+}
+#courseManagementCourses > .tools > .zena-select + .zena-select{
+  margin-top:0 !important;
+}
+@media(max-width:900px){
+  #courseManagementCourses > .tools{
+    grid-template-columns:1fr 1fr !important;
+  }
+  #courseManagementCourses > .tools .search-wrap{
+    grid-column:1/-1 !important;
+  }
+}
+</style>
+
+<script>
+/* Remove the global dropdown enhancement only from Course Management filters.
+   This restores the original search/filter structure without changing dropdowns elsewhere. */
+(function(){
+  function restoreCourseManagementFilters(){
+    const tools=document.querySelector('#courseManagementCourses > .tools');
+    if(!tools) return;
+
+    ['categoryFilter','statusFilter'].forEach(id=>{
+      const select=document.getElementById(id);
+      if(!select) return;
+
+      const wrapper=select.closest('.zena-select');
+      if(wrapper){
+        wrapper.parentNode.insertBefore(select,wrapper);
+        wrapper.remove();
+      }
+
+      select.classList.remove('zena-select-native');
+      select.removeAttribute('aria-hidden');
+      select.removeAttribute('tabindex');
+      select.dataset.zenaEnhanced='skip-course-management';
+      select.style.cssText='';
+    });
+  }
+
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',restoreCourseManagementFilters);
+  }else{
+    restoreCourseManagementFilters();
+  }
+
+  setTimeout(restoreCourseManagementFilters,0);
+})();
+</script>
+
+
+<style>
+/* FINAL Course Management toolbar: one search + two filters, one row */
+#courseManagementCourses > .tools{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 220px 220px !important;
+  gap:12px !important;
+  align-items:center !important;
+  padding:12px !important;
+  overflow:visible !important;
+}
+#courseManagementCourses > .tools .search-wrap{
+  grid-column:auto !important;
+  width:100% !important;
+  height:46px !important;
+  margin:0 !important;
+}
+#courseManagementCourses > .tools #courseSearch{
+  width:100% !important;
+  height:46px !important;
+  margin:0 !important;
+  box-sizing:border-box !important;
+}
+
+/* Only the two original native selects are used on this page */
+#courseManagementCourses > .tools > #categoryFilter,
+#courseManagementCourses > .tools > #statusFilter{
+  display:block !important;
+  position:static !important;
+  width:100% !important;
+  height:46px !important;
+  min-height:46px !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
+  clip:auto !important;
+  clip-path:none !important;
+  margin:0 !important;
+  padding:0 40px 0 14px !important;
+  border:1px solid #d8e0ec !important;
+  border-radius:10px !important;
+  background:#fff !important;
+  color:#172033 !important;
+  box-shadow:none !important;
+  box-sizing:border-box !important;
+  font-weight:600 !important;
+}
+@media(max-width:900px){
+  #courseManagementCourses > .tools{
+    grid-template-columns:1fr 1fr !important;
+  }
+  #courseManagementCourses > .tools .search-wrap{
+    grid-column:1/-1 !important;
+  }
+}
+</style>
+
+<script>
+/* Permanently exclude Course Management filters from the global custom-select enhancer. */
+(function(){
+  function repairCourseFilters(){
+    const tools=document.querySelector('#courseManagementCourses > .tools');
+    if(!tools) return;
+
+    ['categoryFilter','statusFilter'].forEach(id=>{
+      let select=document.getElementById(id);
+      if(!select) return;
+
+      const wrapper=select.closest('.zena-select');
+      if(wrapper){
+        /* Move the real select out, then delete the generated button/menu wrapper. */
+        wrapper.parentNode.insertBefore(select,wrapper);
+        wrapper.remove();
+      }
+
+      select.dataset.zenaEnhanced='course-management-native';
+      select.classList.remove('zena-select-native');
+      select.removeAttribute('aria-hidden');
+      select.removeAttribute('tabindex');
+      select.style.cssText='';
+    });
+
+    /* Defensive cleanup: no generated custom dropdowns belong in this toolbar. */
+    tools.querySelectorAll('.zena-select').forEach(wrapper=>{
+      const native=wrapper.querySelector('select');
+      if(native){
+        wrapper.parentNode.insertBefore(native,wrapper);
+        native.classList.remove('zena-select-native');
+        native.dataset.zenaEnhanced='course-management-native';
+        native.removeAttribute('aria-hidden');
+        native.removeAttribute('tabindex');
+        native.style.cssText='';
+      }
+      wrapper.remove();
+    });
+  }
+
+  repairCourseFilters();
+  document.addEventListener('DOMContentLoaded',repairCourseFilters);
+
+  /* Run after the global enhancer's initial pass, then stop it from recreating duplicates. */
+  setTimeout(repairCourseFilters,0);
+  setTimeout(repairCourseFilters,50);
+  setTimeout(repairCourseFilters,250);
+})();
+</script>
+
+
+<script>
+(function(){
+  function finalCourseFilterCleanup(){
+    const tools = document.querySelector('#courseManagementCourses > .tools');
+    if(!tools) return;
+
+    ['categoryFilter','statusFilter'].forEach(id=>{
+      const select = document.getElementById(id);
+      if(!select) return;
+
+      const wrapper = select.closest('.zena-select');
+      if(wrapper){
+        tools.insertBefore(select, wrapper);
+        wrapper.remove();
+      }
+
+      select.classList.remove('zena-select-native');
+      select.removeAttribute('aria-hidden');
+      select.removeAttribute('tabindex');
+      select.removeAttribute('data-zena-enhanced');
+      select.style.cssText = '';
+    });
+
+    /* Delete any orphan custom controls left from earlier versions. */
+    tools.querySelectorAll('.zena-select').forEach(el=>el.remove());
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', finalCourseFilterCleanup);
+  } else {
+    finalCourseFilterCleanup();
+  }
+})();
+</script>
+
+
+<style id="final-search-filter-system">
+/* FINAL unified search + filter treatment */
+.tools{
+  display:flex !important;
+  align-items:center !important;
+  gap:12px !important;
+  flex-wrap:nowrap !important;
+  overflow:visible !important;
+}
+.tools > .search-wrap{
+  flex:1 1 360px !important;
+  min-width:240px !important;
+  height:46px !important;
+  position:relative !important;
+  margin:0 !important;
+}
+.tools > .search-wrap > input,
+.tools > .search-wrap .field{
+  width:100% !important;
+  height:46px !important;
+  min-height:46px !important;
+  margin:0 !important;
+  padding:0 14px 0 42px !important;
+  border:1px solid #d8e0ec !important;
+  border-radius:10px !important;
+  background:#fff !important;
+  box-sizing:border-box !important;
+  font-family:"Public Sans",sans-serif !important;
+  font-size:max(12px,1em) !important;
+}
+.tools > .search-wrap:before{
+  left:15px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  z-index:2 !important;
+  pointer-events:none !important;
+}
+.tools > .select-shell{
+  flex:0 0 220px !important;
+  width:220px !important;
+  min-width:180px !important;
+  height:46px !important;
+  margin:0 !important;
+  position:relative !important;
+}
+.tools > .select-shell > select{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  opacity:0 !important;
+  pointer-events:none !important;
+}
+.tools > .select-shell > .select-trigger{
+  width:100% !important;
+  height:46px !important;
+  min-height:46px !important;
+  margin:0 !important;
+  padding:0 14px !important;
+  border:1px solid #d8e0ec !important;
+  border-radius:10px !important;
+  background:#fff !important;
+  box-sizing:border-box !important;
+  font-family:"Public Sans",sans-serif !important;
+  font-size:12px !important;
+  font-weight:600 !important;
+}
+.tools > .select-shell > .select-menu{
+  z-index:100000 !important;
+}
+/* Course Management and Browse Courses use the same layout */
+#courseManagementCourses > .tools,
+#browse-courses > .tools{
+  display:flex !important;
+  grid-template-columns:none !important;
+  padding:12px !important;
+  gap:12px !important;
+  align-items:center !important;
+  flex-wrap:nowrap !important;
+}
+#courseManagementCourses > .tools > #categoryFilter,
+#courseManagementCourses > .tools > #statusFilter{
+  flex:0 0 220px !important;
+  width:220px !important;
+  height:46px !important;
+  min-height:46px !important;
+  margin:0 !important;
+  font-family:"Public Sans",sans-serif !important;
+  font-size:12px !important;
+}
+@media(max-width:900px){
+  .tools,
+  #courseManagementCourses > .tools,
+  #browse-courses > .tools{
+    flex-wrap:wrap !important;
+  }
+  .tools > .search-wrap{
+    flex:1 1 100% !important;
+    min-width:100% !important;
+  }
+  .tools > .select-shell,
+  #courseManagementCourses > .tools > #categoryFilter,
+  #courseManagementCourses > .tools > #statusFilter{
+    flex:1 1 calc(50% - 6px) !important;
+    width:auto !important;
+  }
+}
+</style>
+<script id="final-dropdown-dedupe">
+/* Keep one dropdown implementation only. The older select-shell controls remain authoritative. */
+(function(){
+  function dedupeDropdowns(){
+    document.querySelectorAll('.zena-select').forEach(wrapper=>{
+      const select=wrapper.querySelector(':scope > select');
+      if(!select) { wrapper.remove(); return; }
+      select.dataset.zenaEnhanced='true';
+      select.classList.remove('zena-select-native');
+      select.removeAttribute('aria-hidden');
+      select.removeAttribute('tabindex');
+      const parent=wrapper.parentNode;
+      parent.insertBefore(select,wrapper);
+      wrapper.remove();
+    });
+
+    /* If a select-shell exists, it must contain exactly one trigger and one menu. */
+    document.querySelectorAll('.select-shell').forEach(shell=>{
+      const triggers=[...shell.children].filter(el=>el.classList && el.classList.contains('select-trigger'));
+      const menus=[...shell.children].filter(el=>el.classList && el.classList.contains('select-menu'));
+      triggers.slice(1).forEach(el=>el.remove());
+      menus.slice(1).forEach(el=>el.remove());
+      const select=shell.querySelector(':scope > select');
+      if(select) select.dataset.zenaEnhanced='true';
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',dedupeDropdowns);
+  else dedupeDropdowns();
+  setTimeout(dedupeDropdowns,0);
+  setTimeout(dedupeDropdowns,100);
+  setTimeout(dedupeDropdowns,300);
+})();
+</script>
+
+</body>
 </html>
